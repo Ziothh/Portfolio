@@ -1,0 +1,29 @@
+#tools {
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        #technologies {
+            display: flex;
+            justify-content: space-around;
+
+            .technologyList {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 20%;
+
+                * {
+                    font-weight: 500;
+                }
+
+                .technologyList-title {
+                    color: var(--clr-primary);
+                }
+                .technologyList-item {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

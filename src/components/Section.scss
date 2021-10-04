@@ -1,0 +1,14 @@
+section.section {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    gap: 60px;
+
+    h1 {
+        color: var(--clr-primary);
+        font-size: 5rem;
+    }
+    & &-container {
+        margin-left: 50px;
+    }
+}

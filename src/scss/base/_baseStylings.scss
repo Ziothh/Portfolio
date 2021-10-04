@@ -1,0 +1,13 @@
+@import "./typography";
+
+p {
+    font-size: $text-font-size;
+}
+
+a {
+    font-size: $text-font-size;
+    color: var(--font-default);
+    &:hover {
+        color: var(--clr-primary);
+    }
+}

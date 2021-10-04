@@ -1,0 +1,11 @@
+// General
+$site-width: 1200px;
+
+// Navbar
+$navbar-height: 8rem;
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

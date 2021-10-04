@@ -1,0 +1,15 @@
+.StackBox {
+    color: var(--bg-clr);
+    background-color: var(--font-default);
+
+    text-transform: uppercase;
+    padding: 5px 10px;
+
+    text-decoration: none;
+    user-select: none;
+
+    &:hover {
+        background-color: var(--clr-primary);
+        color: var(--bg-clr);
+    }
+}

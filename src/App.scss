@@ -1,0 +1,37 @@
+@import "./scss/base/colors";
+@import "./scss/base/baseStylings";
+@import "./scss/base/layout";
+
+html,
+body {
+    scrollbar-color: #f07178 #{clr(background, dark)};
+    scrollbar-width: thin;
+}
+
+#root {
+    font-family: "Fira Code", monospace;
+    background-color: clr(background, dark);
+    color: clr(font, light-clr);
+    min-height: 100vh;
+
+    #App {
+        max-width: $site-width;
+        margin-inline: auto;
+
+        --bg-clr: #{clr(background, dark)};
+        --font-default: #{clr(font, light-clr)};
+        --clr-primary: #f07178;
+
+        padding-bottom: 50px;
+
+        *::selection {
+            background: var(--clr-primary);
+            color: var(--font-default);
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--clr-primary);
+            border-radius: 3px;
+        }
+    }
+}
