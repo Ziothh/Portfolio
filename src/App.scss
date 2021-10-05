@@ -8,8 +8,11 @@ body {
     scrollbar-width: thin;
 }
 
-#root {
+* {
     font-family: "Fira Code", monospace;
+}
+
+#root {
     background-color: clr(background, dark);
     color: clr(font, light-clr);
     min-height: 100vh;

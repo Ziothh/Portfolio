@@ -1,5 +1,9 @@
 @import "./typography";
 
+.round {
+    border-radius: 50% !important;
+}
+
 p {
     font-size: $text-font-size;
 }
