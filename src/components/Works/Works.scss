@@ -11,6 +11,9 @@
             .project-image {
                 position: relative;
 
+                display: flex;
+                justify-content: center;
+
                 overflow: hidden;
 
                 &.project-overlay--shown {
@@ -62,7 +65,7 @@
 
                 img {
                     height: 100%;
-                    max-width: 100%;
+                    max-height: 1210px;
                     overflow: none;
                     transition: all 400ms;
 

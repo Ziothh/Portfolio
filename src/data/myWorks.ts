@@ -1,5 +1,6 @@
 import TaskPageImage from "../images/taskPage.png";
 import PortfolioImage from "../images/portfolio.png";
+import MailparserImage from "../images/code.png";
 import type { TechStackItem } from "./technologies/types";
 
 const works: {
@@ -28,7 +29,7 @@ const works: {
         description: `
             Een mailparser, gemaakt voor agence rosseel om de leads die ze via e-mail krijgen te verwerken 
             en die door te sturen naar hun API.`,
-        image: TaskPageImage,
+        image: MailparserImage,
         techStack: ["Python"],
         siteLink: null,
         githubLink: "https://github.com/Ziothh/rosseel-mailparser"
