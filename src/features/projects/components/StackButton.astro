@@ -1,0 +1,24 @@
+---
+// Click button, get confetti!
+
+import STACK_TECHNOLOGIES, { STACK_TECHNOLOGIES_VALIDATOR, TechStackItems } from '../../../data/TECHNOLOGIES.constant';
+
+// Styled by Tailwind :)
+type Props = {
+    stackItem: TechStackItems.All
+};
+
+const stackItem = STACK_TECHNOLOGIES[Astro.props.stackItem]
+---
+
+<a
+    href={stackItem.url}
+	class="text-black py-1 px-3 uppercase bg-white hover:bg-primary transition-all duration-150 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+>
+	{Astro.props.stackItem}
+</a>
+
+<script>
+	import confetti from 'canvas-confetti';
+	document.body.querySelector('button').addEventListener('click', () => confetti());
+</script>

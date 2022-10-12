@@ -1,0 +1,34 @@
+---
+const { content, hero: Hero } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{content?.title ?? "Louis Giët"}</title>
+		<!-- <title>Louis Giët</title> -->
+
+        <style is:global>
+            .Container {
+                --container-padding-inline: 5vw;
+                --container-max-width: 1400px;
+
+                display: grid;
+                grid-template-columns: 1fr min(var(--container-max-width), calc(100vw - (2 * var(--container-padding-inline)))) 1fr;
+
+            }
+            .Container > * {
+                grid-column: 2;
+            }
+        </style>
+	</head>
+	<body class="bg-black text-white font-mono text-xl">
+        {Hero && (<Hero/>)}
+		<main class="Container">
+            <slot />
+        </main>
+	</body>
+</html>

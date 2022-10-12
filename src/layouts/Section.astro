@@ -1,0 +1,18 @@
+---
+type Props = {
+    id: string
+}
+const { id } = Astro.props;
+---
+
+<section aria-label={`${id} section`} id={id} class="py-8">
+    <h2 class="sr-only">{id}</h2>
+
+    <span class="text-red-500 font-semibold font-mono text-6xl">{`<section id="${id}">`}</span>
+
+    <div class="my-14">
+        <slot/>
+    </div>
+
+    <span class="text-red-500 font-semibold font-mono text-6xl">{"</section>"}</span>
+</section>

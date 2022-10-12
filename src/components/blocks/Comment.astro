@@ -1,0 +1,9 @@
+---
+type Props = {
+    tag?: "h3" | "p"
+}
+
+const Tag = Astro.props.tag ?? "h3"
+---
+
+<Tag class="text-slate-400">// <slot/></Tag>

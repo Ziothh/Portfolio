@@ -1,0 +1,14 @@
+---
+import ProjectBlock from "./ProjectBlock.astro";
+
+const projects = (await Astro.glob("../sections/*.project.mdx"))
+// Filter out disabled projects
+.filter(p => !p.file.split("/").pop().startsWith("_"))
+---
+
+<div class="grid grid-cols-1 grid-rows-[fit-content] gap-8">
+    {projects.map((p, i) => (<>
+        {i !== 0 && <div aria-label="divider" class="text-stone-700 flex items-center">{"<hr"}<hr class="bg-transparent mx-2 w-full border-t border-dashed border-stone-700"/>{"/>"}</div>}
+        <ProjectBlock project={(p as any)} />
+    </>))}
+</div>

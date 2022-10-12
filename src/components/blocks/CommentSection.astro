@@ -1,0 +1,14 @@
+---
+import Comment from './Comment.astro';
+
+type Props = {
+    title: string,
+};
+---
+
+<div class="flex flex-col my-8">
+    <Comment>{Astro.props.title}</Comment>
+    <div class="mt-4">
+        <slot/>
+    </div>
+</div>
