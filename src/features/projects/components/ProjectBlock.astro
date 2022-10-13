@@ -5,6 +5,9 @@ import type {MDXInstance} from "astro"
 import {z, infer} from "zod"
 import CommentSection from '../../../components/blocks/CommentSection.astro'
 import StackButton from './StackButton.astro'
+import { AiFillGithub } from "react-icons/ai"
+import { FiLink } from "react-icons/fi"
+
 // import {HiCalendarDays} from "react-icons/hi"
 
 // const propsValidator = z.object({
@@ -70,11 +73,11 @@ const {
 )}
 
 
-<article class="rounded-md overflow-hidden">
-    <div class="relative">
+<article class="group">
+    <div class="relative rounded-md overflow-hidden">
         <img src={imageUrl} alt={"A picture of the project"}>
 
-        <div class="absolute top-0 left-0 w-full h-full opacity-0 bg-stone-900 bg-opacity-75 hover:opacity-100 transition-opacity duration-150 backdrop-blur-sm p-16 flex flex-col justify-center">
+        <div class="absolute top-0 left-0 w-full h-full opacity-0 bg-stone-900 bg-opacity-75 group-hover:opacity-100 transition-opacity duration-150 backdrop-blur-sm p-16 flex flex-col justify-center [&>*]:max-w-[700px] cursor-help">
             <h3 class="text-primary text-4xl font-semibold">{name}</h3>
             <div class="mt-4">
                 <project.default/>
@@ -91,13 +94,16 @@ const {
     </div>
 
     <CommentSection title="Tech stack">
-        <div class="flex gap-4">
+        <div class="flex gap-4 flex-wrap">
             {techStack.map(t => (
                 <StackButton stackItem={t} />
             ))}
         </div>
     </CommentSection>
     <CommentSection title="See it in action">
-        ...
+        <div class="flex gap-6 flex-wrap">
+            {siteLink && <a href={siteLink} class="flex items-center gap-4">Visit the site <FiLink></FiLink></a>}
+            {githubLink && <a href={githubLink} class="flex items-center gap-4">See the code <AiFillGithub></AiFillGithub></a>}
+        </div>
     </CommentSection>
 </article>

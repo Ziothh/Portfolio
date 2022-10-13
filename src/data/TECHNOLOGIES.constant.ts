@@ -6,8 +6,11 @@ export namespace TechStackItems {
     | "SCSS" | "CSS" 
     | "HTML"
 
-    export type FrontendTool = "ReactJS" | "NextJS" | "Astro"
-    | "TailwindCSS" | "TailwindUI"
+    export type FrontendTool = "ReactJS" | 
+    "TailwindCSS" | "TailwindUI"
+    
+    export type Framework = "NextJS" | "Astro"
+
     export type BackendTool = "NodeJS" 
     | "Express" 
     | "mikro-orm" | "Prisma" 
@@ -42,7 +45,13 @@ export const CODE_LANG_URLs: { [key in TechStackItems.CodeLanguage]: TechStackIt
 
 export const FRONTEND_URLs: { [key in TechStackItems.FrontendTool]: TechStackItems.Data } = {
     ReactJS: { url: "https://reactjs.org" },
-    
+    TailwindCSS: { url: "#" },
+}
+
+export const FRAMEWORK_URLs: { [key in TechStackItems.Framework]: TechStackItems.Data } = {
+    Astro: { url: "https://astro.build/" },
+    NextJS: { url: "https://nextjs.org/" },
+
 }
 
 export const BACKEND_URLs: { [key in TechStackItems.BackendTool]: TechStackItems.Data } = {
@@ -68,6 +77,7 @@ const STACK_TECHNOLOGIES = {
     ...CODE_LANG_URLs,
     ...FRONTEND_URLs,
     ...BACKEND_URLs,
+    ...FRAMEWORK_URLs,
     ...SHARED_URLs,
     ...DATABASE_URLs,
     ...APPLICATION_URLs,

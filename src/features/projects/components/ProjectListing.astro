@@ -6,9 +6,11 @@ const projects = (await Astro.glob("../sections/*.project.mdx"))
 .filter(p => !p.file.split("/").pop().startsWith("_"))
 ---
 
-<div class="grid grid-cols-1 grid-rows-[fit-content] gap-8">
+<div class="flex flex-col">
     {projects.map((p, i) => (<>
         {i !== 0 && <div aria-label="divider" class="text-stone-700 flex items-center">{"<hr"}<hr class="bg-transparent mx-2 w-full border-t border-dashed border-stone-700"/>{"/>"}</div>}
-        <ProjectBlock project={(p as any)} />
+        <div class="py-8 first:pt-0 last:pb-0">
+            <ProjectBlock project={(p as any)} />
+        </div>
     </>))}
 </div>

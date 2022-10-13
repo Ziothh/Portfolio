@@ -11,7 +11,7 @@ const { content, hero: Hero } = Astro.props;
 		<title>{content?.title ?? "Louis Giët"}</title>
 		<!-- <title>Louis Giët</title> -->
 
-        <style is:global>
+        <style is:global lang="scss">
             .Container {
                 --container-padding-inline: 5vw;
                 --container-max-width: 1400px;
@@ -19,10 +19,19 @@ const { content, hero: Hero } = Astro.props;
                 display: grid;
                 grid-template-columns: 1fr min(var(--container-max-width), calc(100vw - (2 * var(--container-padding-inline)))) 1fr;
 
+                & > * {
+                    grid-column: 2;
+                }
             }
-            .Container > * {
-                grid-column: 2;
+
+            a {
+                transition-property: color, background;
+                transition-duration: 150ms;
+                &:hover {
+                    color: rgb(239 68 68 / var(--tw-text-opacity));
+                }
             }
+
         </style>
 	</head>
 	<body class="bg-black text-white font-mono text-xl">
