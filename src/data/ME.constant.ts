@@ -16,7 +16,9 @@ const getAge = () => {
 const ME = {
     age: getAge(),
     phone: "+32486165184",
-    email: "louisgiet.w@gmail.com"
-}
+    email: "louisgiet.w@gmail.com",
+    github: "https://github.com/Ziothh",
+    linkedIn: "https://www.linkedin.com/in/louis-gi%C3%ABt-87683021b",
+} as const
 
 export default ME

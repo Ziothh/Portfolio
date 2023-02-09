@@ -1,0 +1,19 @@
+---
+import type { TechStackItems } from '@data/TECHNOLOGIES.constant';
+
+export type Props = {
+    title: string
+    items: TechStackItems.All[]
+};
+
+const {title, items} = Astro.props
+---
+
+<ul class="grid gap-2">
+    <h3 class="text-primary text-2xl">{title}</h3>
+    {items.map(i => (
+        <li>
+            {i}
+        </li>
+    ))}
+</ul>

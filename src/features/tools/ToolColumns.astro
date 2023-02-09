@@ -1,0 +1,42 @@
+---
+import ToolColumn, { Props } from "./ToolColumn.astro";
+
+const tools: Props[] = [
+    {
+        title: "Frontend",
+        items: [
+            "ReactJS",
+            "NextJS",
+            "Astro",
+            "TailwindCSS",
+            "TailwindUI",
+            "SCSS",
+        ],
+    },
+    {
+        title: "Backend",
+        items: [
+            "NodeJS",
+            "Prisma",
+            "Express",
+            "mikro-orm",
+            "Python",
+        ]
+    },
+    {
+        title: "Other",
+        items: [
+            "NextJS",
+            "tRPC",
+            "GraphQL",
+            "Astro",
+            "Figma",
+
+        ]
+    }
+]
+---
+
+<div class="flex justify-around">
+    {tools.map(t => <ToolColumn {...t} />)}
+</div>

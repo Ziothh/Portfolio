@@ -24,6 +24,7 @@ export namespace TechStackItems {
         TechStackItems.CodeLanguage 
         | TechStackItems.FrontendTool 
         | TechStackItems.BackendTool 
+        | TechStackItems.Framework
         | TechStackItems.SharedTool 
         | TechStackItems.Database 
         | TechStackItems.Application
